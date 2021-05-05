@@ -1,0 +1,44 @@
+body
+{
+    background-image: url('../images/wallpapersden.com_cloudy-field-paint_3840x2160.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1
+{
+    color: white;
+    font-family: "Yellowtail", Arial;
+    font-size: 100px;
+    text-shadow: 2px 2px 0px black;
+    margin-top: 50px;
+}
+
+#tab-box
+{
+    display: grid;
+    grid-template-columns: 22vw auto 25vw;
+    background-color: white;
+    width: 75vw;
+    height: 50px;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+.tab-selection
+{
+    margin-top: 10px;
+}
+
+.tab-label
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+.tab-label:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
