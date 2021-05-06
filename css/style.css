@@ -42,3 +42,50 @@ h1
     cursor: pointer;
     text-decoration: underline;
 }
+
+.description-box
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 75vw;
+    height: auto;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+.container-header
+{
+    font-family: "Yellowtail", Arial;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.label-description
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.testimonial-name
+{
+    font-family: "Yellowtail", Arial;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.separator
+{
+    height: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 1px solid black;
+}
