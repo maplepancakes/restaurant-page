@@ -14,7 +14,7 @@ const homePage = (function()
         const h1 = document.createElement(`h1`);
 
         // Set attribute for created element
-        h1.textContent = `Nostalgia Springs`;
+        h1.textContent = `Autumn Nostalgia`;
 
         // Append elements for user display
         center.appendChild(header);
@@ -159,10 +159,16 @@ const homePage = (function()
         }
     }
 
-    return {loadHeader, loadSelectionTab, loadAboutSection, loadTestimonialSection}
+    // Loads entire contents of home page to user display
+    const loadPage = function()
+    {
+        loadHeader();
+        loadSelectionTab();
+        loadAboutSection();
+        loadTestimonialSection();
+    }
+
+    return {loadPage};
 })();
 
-homePage.loadHeader();
-homePage.loadSelectionTab();
-homePage.loadAboutSection();
-homePage.loadTestimonialSection();
+homePage.loadPage();
