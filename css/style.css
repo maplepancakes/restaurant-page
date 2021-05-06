@@ -18,7 +18,7 @@ h1
 #tab-box
 {
     display: grid;
-    grid-template-columns: 22vw auto 25vw;
+    grid-template-columns: auto auto auto;
     background-color: white;
     width: 75vw;
     height: 50px;
