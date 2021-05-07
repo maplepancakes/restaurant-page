@@ -89,3 +89,41 @@ h1
     margin-right: 10px;
     border-top: 1px solid black;
 }
+
+.menu-box
+{
+    display: grid;
+    grid-template-columns: 380px 1px auto;
+    background-color: white;
+    width: 75vw;
+    height: auto;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+.menu-image
+{
+    margin: 10px 10px 10px 10px;
+    border: 2px solid black;
+}
+
+.separator-vertical
+{
+    margin-top: 10px;
+    border-left: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.menu-description
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-title
+{
+    margin-top: 10px;
+    font-family: "Yellowtail", Arial;
+    font-size: 30px;
+    font-weight: 900;
+}
