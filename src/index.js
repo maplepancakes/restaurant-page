@@ -1,5 +1,4 @@
 import menuPage from "./menu";
-import contactPage from "./contact";
 
 const homePage = (function()
 {  
@@ -198,8 +197,7 @@ const homePage = (function()
     return {loadHeaderAndSelectionTab, loadHomePage, unloadHomePage};
 })();
 
-// Main program
-homePage.loadHeaderAndSelectionTab();
+/*homePage.loadHeaderAndSelectionTab();
 homePage.loadHomePage();
 
 const homeButton = document.querySelector(`#tab-label-0`);
@@ -208,42 +206,19 @@ const contactButton = document.querySelector(`#tab-label-2`);
 
 homeButton.addEventListener(`click`, function(e)
 {
-    if (typeof document.querySelector(`.menu-box`) !== `null`)
-    {
-        menuPage.unloadMenuPage();
-    }
-    else if (typeof document.querySelector(`.contact-box`) !== `null`)
-    {
-        contactPage.unloadContactPage();
-    }
+    menuPage.unloadMenuPage();
 
     homePage.loadHomePage();
 });
 
 menuButton.addEventListener(`click`, function(e)
 {
-    if (typeof document.querySelector(`#about-box`) !== `null`)
-    {
-        homePage.unloadHomePage();
-    }
-    else if (typeof document.querySelector(`.contact-box`) !== `null`)
-    {
-        contactPage.unloadContactPage();
-    }
+    homePage.unloadHomePage();
 
     menuPage.loadMenuPage();
 });
 
 contactButton.addEventListener(`click`, function(e)
 {
-    if (typeof document.querySelector(`#about-box`) !== `null`)
-    {
-        homePage.unloadHomePage();
-    }
-    else if (typeof document.querySelector(`.menu-box`) !== `null`)
-    {
-        menuPage.unloadMenuPage();
-    }
 
-    contactPage.loadContactPage();
-});
+});*/
