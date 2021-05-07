@@ -1,11 +1,13 @@
+import menuPage from "./menu";
+
 const homePage = (function()
-{
+{  
     const mainContainer = document.querySelector(`#content`);
 
     const center = document.createElement(`center`);
 
     mainContainer.appendChild(center);
-    
+
     // Loads header to user display
     const loadHeader = function()
     {
@@ -158,15 +160,65 @@ const homePage = (function()
             }
         }
     }
+    
+    const unloadAboutSection = function()
+    {
+        const aboutBox = document.querySelector(`#about-box`);
 
-    // Loads entire contents of home page to user display
-    const loadPage = function()
+        center.removeChild(aboutBox);
+    }
+
+    const unloadTestimonialSection = function()
+    {
+        const testimonialBox = document.querySelector(`#testimonial-box`);
+
+        center.removeChild(testimonialBox);
+    }
+
+    const loadHeaderAndSelectionTab = function()
     {
         loadHeader();
         loadSelectionTab();
+    }
+
+    // Loads entire contents of home page to user display
+    const loadHomePage = function()
+    {
         loadAboutSection();
         loadTestimonialSection();
     }
 
-    return {loadPage};
+    const unloadHomePage = function()
+    {
+        unloadAboutSection();
+        unloadTestimonialSection();
+    }
+
+    return {loadHeaderAndSelectionTab, loadHomePage, unloadHomePage};
 })();
+
+homePage.loadHeaderAndSelectionTab();
+homePage.loadHomePage();
+
+const homeButton = document.querySelector(`#tab-label-0`);
+const menuButton = document.querySelector(`#tab-label-1`);
+const contactButton = document.querySelector(`#tab-label-2`);
+
+homeButton.addEventListener(`click`, function(e)
+{
+    menuPage.unloadMenuPage();
+
+    homePage.loadHomePage();
+});
+
+menuButton.addEventListener(`click`, function(e)
+{
+    homePage.unloadHomePage();
+
+    menuPage.loadMenuPage();
+});
+
+contactButton.addEventListener(`click`, function(e)
+{
+
+});
