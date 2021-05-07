@@ -4,7 +4,6 @@ const menuPage = (function()
     const loadMenuPage = function()
     {
         const center = document.querySelector(`center`); 
-        console.log(center)
         
         const numberOfMenus = 4; // Number of menus to generate
 
