@@ -170,5 +170,3 @@ const homePage = (function()
 
     return {loadPage};
 })();
-
-homePage.loadPage();
