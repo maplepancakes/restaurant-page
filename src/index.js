@@ -197,7 +197,7 @@ const homePage = (function()
     return {loadHeaderAndSelectionTab, loadHomePage, unloadHomePage};
 })();
 
-homePage.loadHeaderAndSelectionTab();
+/*homePage.loadHeaderAndSelectionTab();
 homePage.loadHomePage();
 
 const homeButton = document.querySelector(`#tab-label-0`);
@@ -221,4 +221,4 @@ menuButton.addEventListener(`click`, function(e)
 contactButton.addEventListener(`click`, function(e)
 {
 
-});
+});*/
