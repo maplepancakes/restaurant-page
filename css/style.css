@@ -114,7 +114,7 @@ h1
     margin-bottom: 10px;
 }
 
-.menu-description
+.menu-description-container
 {
     display: flex;
     flex-direction: column;
