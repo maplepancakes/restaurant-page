@@ -127,3 +127,14 @@ h1
     font-size: 30px;
     font-weight: 900;
 }
+
+.contact-box
+{
+    display: grid;
+    grid-template-columns: 520px 1px auto;
+    background-color: white;
+    width: 75vw;
+    height: auto;
+    margin-top: 50px;
+    border: 1px solid black;
+}
