@@ -3,11 +3,11 @@ import contactPage from "./contact";
 
 const homePage = (function()
 {  
-    const mainContainer = document.querySelector(`#content`);
+    const contentDiv = document.querySelector(`#content`);
 
     const center = document.createElement(`center`);
 
-    mainContainer.appendChild(center);
+    contentDiv.appendChild(center);
 
     // Loads header to user display
     const loadHeader = function()
@@ -68,7 +68,7 @@ const homePage = (function()
     }
 
     // Loads `Who are we?` section to user display
-    const loadAboutSection = function()
+    const loadAboutSection = function(mainContentContainer)
     {
         // Create elements
         const aboutBox = document.createElement(`div`);
@@ -86,13 +86,14 @@ const homePage = (function()
         labelDescription.textContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at lectus viverra, tristique ex nec, vehicula dolor. Cras egestas, ligula et posuere efficitur, mauris sapien pharetra magna, ornare viverra eros lacus ac magna. Curabitur semper erat aliquam augue luctus finibus. Maecenas ac consequat diam. Proin in scelerisque arcu. Integer id imperdiet justo, at blandit sem. Etiam cursus mauris sollicitudin, euismod sem et, sollicitudin risus. Mauris accumsan odio sed neque fringilla sollicitudin ut in massa. Vivamus aliquet massa risus, in rhoncus nisl maximus vitae. Aliquam sem nulla, mattis id imperdiet ac, porttitor vitae nisl. In ut dolor ac odio blandit dignissim vitae non est. Sed vitae enim non est finibus pretium. Ut at nunc vitae nunc aliquam tempor ac a nunc.`;
         
         // Append elements for user display
-        center.appendChild(aboutBox);
+        center.appendChild(mainContentContainer);
+        mainContentContainer.appendChild(aboutBox);
         aboutBox.appendChild(containerHeader);
         aboutBox.appendChild(labelDescription);
     }
 
     // Loads `Testimonial` section to user display
-    const loadTestimonialSection = function()
+    const loadTestimonialSection = function(mainContentContainer)
     {
         const numberOfContainers = 3; // Number of testimonial containers to generate
         const NUMBER_OF_SEPARATORS = numberOfContainers - 1; // Number of separators (DO NOT MODIFY)
@@ -147,7 +148,8 @@ const homePage = (function()
         }
 
         // Append elements for user display
-        center.appendChild(testimonialBox);
+        center.appendChild(mainContentContainer);
+        mainContentContainer.appendChild(testimonialBox);
         testimonialBox.appendChild(containerHeader);
 
         for (let i = 0; i < numberOfContainers; i++)
@@ -161,24 +163,6 @@ const homePage = (function()
             }
         }
     }
-    
-    // Unloads `What are we?` section from user display
-    const unloadAboutSection = function()
-    {
-        const aboutBox = document.querySelector(`#about-box`);
-        console.log(aboutBox);
-
-        center.removeChild(aboutBox);
-    }
-
-    // Unloads `Testimonial` section from user display
-    const unloadTestimonialSection = function()
-    {
-        const testimonialBox = document.querySelector(`#testimonial-box`);
-        console.log(testimonialBox);
-
-        center.removeChild(testimonialBox);
-    }
 
     // Loads header and selection tab to user display
     const loadHeaderAndSelectionTab = function()
@@ -190,18 +174,22 @@ const homePage = (function()
     // Loads `What are we?` and `Testimonial` section to user display
     const loadHomePage = function()
     {
-        loadAboutSection();
-        loadTestimonialSection();
+        const mainContentContainer = document.createElement(`div`);
+        mainContentContainer.classList.add(`main-content-container`);
+
+        loadAboutSection(mainContentContainer);
+        loadTestimonialSection(mainContentContainer);
     }
 
-    // Unloads `What are we?` and `Testimonial` section from user display
-    const unloadHomePage = function()
+    // Unloads contents (exclusive of header and selection tab) from user display
+    const unloadPageContents = function()
     {
-        unloadAboutSection();
-        unloadTestimonialSection();
+        const mainContentContainer = document.querySelector(`.main-content-container`);
+
+        center.removeChild(mainContentContainer);
     }
 
-    return {loadHeaderAndSelectionTab, loadHomePage, unloadHomePage};
+    return {loadHeaderAndSelectionTab, loadHomePage, unloadPageContents};
 })();
 
 // Main program
@@ -214,24 +202,21 @@ const contactButton = document.querySelector(`#tab-label-2`);
 
 homeButton.addEventListener(`click`, function(e)
 {
-    menuPage.unloadMenuPage();
-    contactPage.unloadContactPage();
+    homePage.unloadPageContents();
 
     homePage.loadHomePage();
 });
 
 menuButton.addEventListener(`click`, function(e)
 {
-    homePage.unloadHomePage();
-    contactPage.unloadContactPage();
+    homePage.unloadPageContents();
 
     menuPage.loadMenuPage();
 });
 
 contactButton.addEventListener(`click`, function(e)
 {
-    homePage.unloadHomePage();
-    menuPage.unloadMenuPage();
+    homePage.unloadPageContents();
 
     contactPage.loadContactPage();
 });

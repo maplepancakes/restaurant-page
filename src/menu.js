@@ -4,6 +4,8 @@ const menuPage = (function()
     const loadMenuPage = function()
     {
         const center = document.querySelector(`center`); 
+        const mainContentContainer = document.createElement(`div`);
+        mainContentContainer.classList.add(`main-content-container`);
         
         const numberOfMenus = 4; // Number of menus to generate
 
@@ -67,7 +69,8 @@ const menuPage = (function()
             menuDescriptionArray[i].textContent = menuDescription[i];
 
             // Append elements for user display
-            center.appendChild(menuBoxArray[i]);
+            center.appendChild(mainContentContainer);
+            mainContentContainer.appendChild(menuBoxArray[i]);
             menuBoxArray[i].appendChild(menuImageArray[i]);
             menuBoxArray[i].appendChild(separatorVerticalArray[i]);
             menuBoxArray[i].appendChild(menuDescriptionContainerArray[i]);
@@ -76,21 +79,7 @@ const menuPage = (function()
         }
     }
 
-    // Unloads menu from user display
-    const unloadMenuPage = function()
-    {
-        const center = document.querySelector(`center`);
-
-        const menuBox = document.querySelectorAll(`.menu-box`);
-        console.log(menuBox);
-        
-        for (let i = 0; i < menuBox.length; i++)
-        {
-            center.removeChild(menuBox[i]);
-        }
-    }
-
-    return {loadMenuPage, unloadMenuPage};
+    return {loadMenuPage};
 })();
 
 export default menuPage;

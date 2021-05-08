@@ -20,6 +20,8 @@ const contactPage = (function()
         let contactDescriptionArray = [];
 
         const center = document.querySelector(`center`);
+        const mainContentContainer = document.createElement(`div`);
+        mainContentContainer.classList.add(`main-content-container`);
 
         // Create elements
         const contactBox = document.createElement(`div`);
@@ -54,7 +56,8 @@ const contactPage = (function()
         }
 
         // Append elements for user display
-        center.appendChild(contactBox);
+        center.appendChild(mainContentContainer);
+        mainContentContainer.appendChild(contactBox);
         contactBox.appendChild(contactImage);
         contactBox.appendChild(separatorVertical);
         contactBox.appendChild(contactDescriptionContainer);
@@ -66,17 +69,7 @@ const contactPage = (function()
         }
     }
 
-    const unloadContactPage = function()
-    {
-        const center = document.querySelector(`center`);
-        const contactBox = document.querySelector(`.contact-box`);
-        console.log(contactBox);
-
-        center.removeChild(contactBox);
-    }
-
-    return {loadContactPage, unloadContactPage};
-
+    return {loadContactPage};
 {}})();
 
 export default contactPage
