@@ -17,7 +17,7 @@ const homePage = (function()
         const h1 = document.createElement(`h1`);
 
         // Set attribute for created element
-        h1.textContent = `Autumn Nostalgia`;
+        h1.textContent = `Des Jours Plus Heureux`;
 
         // Append elements for user display
         center.appendChild(header);
@@ -80,10 +80,10 @@ const homePage = (function()
         aboutBox.setAttribute(`id`, `about-box`);
 
         containerHeader.classList.add(`container-header`);
-        containerHeader.textContent = `Who are we?`;
+        containerHeader.textContent = `About Us`;
 
         labelDescription.classList.add(`label-description`);
-        labelDescription.textContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at lectus viverra, tristique ex nec, vehicula dolor. Cras egestas, ligula et posuere efficitur, mauris sapien pharetra magna, ornare viverra eros lacus ac magna. Curabitur semper erat aliquam augue luctus finibus. Maecenas ac consequat diam. Proin in scelerisque arcu. Integer id imperdiet justo, at blandit sem. Etiam cursus mauris sollicitudin, euismod sem et, sollicitudin risus. Mauris accumsan odio sed neque fringilla sollicitudin ut in massa. Vivamus aliquet massa risus, in rhoncus nisl maximus vitae. Aliquam sem nulla, mattis id imperdiet ac, porttitor vitae nisl. In ut dolor ac odio blandit dignissim vitae non est. Sed vitae enim non est finibus pretium. Ut at nunc vitae nunc aliquam tempor ac a nunc.`;
+        labelDescription.textContent = `'Des Jours Plus Heureux', or 'Happier Times', is a place for reflection to the past. Our restaurant prides on providing an environment which brings you back to a time when things were much more simpler and happier. With our track record of satisfied customers that predates more than half a millenium, rest assured, you too, will come out of this place feeling the same.`;
         
         // Append elements for user display
         center.appendChild(mainContentContainer);
@@ -133,9 +133,9 @@ const homePage = (function()
             testimonialNameArray[i].setAttribute(`id`, `testimonial-name-${i}`);
         }
 
-        labelDescriptionArray[0].textContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at lectus viverra, tristique ex nec, vehicula dolor. Cras egestas, ligula et posuere efficitur, mauris sapien pharetra magna, ornare viverra eros lacus ac magna. Curabitur semper erat aliquam augue luctus finibus. Maecenas ac consequat diam. Proin in scelerisque arcu. Integer id imperdiet justo, at blandit sem. Etiam cursus mauris sollicitudin, euismod sem et, sollicitudin risus. Mauris accumsan odio sed neque fringilla sollicitudin ut in massa. Vivamus aliquet massa risus, in rhoncus nisl maximus vitae. Aliquam sem nulla, mattis id imperdiet ac, porttitor vitae nisl. In ut dolor ac odio blandit dignissim vitae non est. Sed vitae enim non est finibus pretium. Ut at nunc vitae nunc aliquam tempor ac a nunc.`;
-        labelDescriptionArray[1].textContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at lectus viverra, tristique ex nec, vehicula dolor. Cras egestas, ligula et posuere efficitur, mauris sapien pharetra magna, ornare viverra eros lacus ac magna. Curabitur semper erat aliquam augue luctus finibus. Maecenas ac consequat diam. Proin in scelerisque arcu. Integer id imperdiet justo, at blandit sem. Etiam cursus mauris sollicitudin, euismod sem et, sollicitudin risus. Mauris accumsan odio sed neque fringilla sollicitudin ut in massa. Vivamus aliquet massa risus, in rhoncus nisl maximus vitae. Aliquam sem nulla, mattis id imperdiet ac, porttitor vitae nisl. In ut dolor ac odio blandit dignissim vitae non est. Sed vitae enim non est finibus pretium. Ut at nunc vitae nunc aliquam tempor ac a nunc.`;
-        labelDescriptionArray[2].textContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at lectus viverra, tristique ex nec, vehicula dolor. Cras egestas, ligula et posuere efficitur, mauris sapien pharetra magna, ornare viverra eros lacus ac magna. Curabitur semper erat aliquam augue luctus finibus. Maecenas ac consequat diam. Proin in scelerisque arcu. Integer id imperdiet justo, at blandit sem. Etiam cursus mauris sollicitudin, euismod sem et, sollicitudin risus. Mauris accumsan odio sed neque fringilla sollicitudin ut in massa. Vivamus aliquet massa risus, in rhoncus nisl maximus vitae. Aliquam sem nulla, mattis id imperdiet ac, porttitor vitae nisl. In ut dolor ac odio blandit dignissim vitae non est. Sed vitae enim non est finibus pretium. Ut at nunc vitae nunc aliquam tempor ac a nunc.`;
+        labelDescriptionArray[0].textContent = `Going to this restaurant brings me back to a time when things were less depressing. I was just a wee little wolf back then, chasing white rabbits with my little wolf buddies and my happy wolf family. Now, they are all dead and I ship lost souls to their salvation or demise for a living. But this place, it helps me forget, even for just a little while.`;
+        labelDescriptionArray[1].textContent = `I used to know this boy, everyone called him Benny. He lived next to me. He was a strange and quiet boy, who seemed to take a huge interest in photography. He was always taking pictures of... well, anything. One day, I walked up to him taking pictures in his backyard, and told him that if he took a nice portrait of me, I would share some of my oreos with him. That was how we became friends. Not long after that, he got really sick and passed away. He was my first love and I miss him. Coming to this place helps me remember the happy moments that we used to share.`;
+        labelDescriptionArray[2].textContent = `Everyone calls me Benny, or well... at least they used to. It's lonely out here, but at least I have this weird looking humanoid wolf that keeps me company. He often tells me stories to keep me entertained, though recently he would not shut up about this restaurant that he keeps going to. He keeps saying that the place is great, and I do believe him. I guess I am just annoyed that I will not be able to go, which does not come as much as a surprise considering that I am dead. Oh well, maybe in another life.`;
 
         testimonialNameArray[0].textContent = `Mythical Ferrywolf`;
         testimonialNameArray[1].textContent = `Chloe`;

@@ -19,18 +19,18 @@ const menuPage = (function()
 
         const menuTitle =
         [
-            `Placeholder`,
-            `Placeholder`,
-            `Placeholder`,
-            `Placeholder`
+            `Ice Gem Biscuits`,
+            `Jelly Topped with Cream`,
+            `Oreos and Milk`,
+            `White Rabbit Candy`
         ] // Title of menu items
 
         const menuDescription =
         [
-            `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-            `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-            `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-            `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
+            `Remember when we were children, visiting our grandparent's house and seeing these simple yet delicious delicacies packed in clear plastic? We have them here.`,
+            `A fancier take on the cup jellies that we used to eat when we were younger. A dessert that brings us back to simpler times.`,
+            `Breakfast, lunch, or dinner, there is no better time to enjoy oreos dipped in milk. Careful, eat too much, and you may get a stern lecture from your parents for eating too much of this irresistible combination.`,
+            `A white-coloured candy with a soft and chewy texture. Not made from actual white rabbits.`
         ] // Description of menu items
 
         // Arrays for storing elements
