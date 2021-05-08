@@ -67,7 +67,7 @@ const homePage = (function()
         }
     }
 
-    // Loads `Who are we?` section to user display
+    // Loads `About Us` section to user display
     const loadAboutSection = function(mainContentContainer)
     {
         // Create elements
@@ -171,7 +171,7 @@ const homePage = (function()
         loadSelectionTab();
     }
 
-    // Loads `What are we?` and `Testimonial` section to user display
+    // Loads `About Us` and `Testimonial` section to user display
     const loadHomePage = function()
     {
         const mainContentContainer = document.createElement(`div`);
