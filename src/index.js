@@ -1,4 +1,5 @@
 import menuPage from "./menu";
+import contactPage from "./contact";
 
 const homePage = (function()
 {  
@@ -161,33 +162,39 @@ const homePage = (function()
         }
     }
     
+    // Unloads `What are we?` section from user display
     const unloadAboutSection = function()
     {
         const aboutBox = document.querySelector(`#about-box`);
+        console.log(aboutBox);
 
         center.removeChild(aboutBox);
     }
 
+    // Unloads `Testimonial` section from user display
     const unloadTestimonialSection = function()
     {
         const testimonialBox = document.querySelector(`#testimonial-box`);
+        console.log(testimonialBox);
 
         center.removeChild(testimonialBox);
     }
 
+    // Loads header and selection tab to user display
     const loadHeaderAndSelectionTab = function()
     {
         loadHeader();
         loadSelectionTab();
     }
 
-    // Loads entire contents of home page to user display
+    // Loads `What are we?` and `Testimonial` section to user display
     const loadHomePage = function()
     {
         loadAboutSection();
         loadTestimonialSection();
     }
 
+    // Unloads `What are we?` and `Testimonial` section from user display
     const unloadHomePage = function()
     {
         unloadAboutSection();
@@ -197,7 +204,8 @@ const homePage = (function()
     return {loadHeaderAndSelectionTab, loadHomePage, unloadHomePage};
 })();
 
-/*homePage.loadHeaderAndSelectionTab();
+// Main program
+homePage.loadHeaderAndSelectionTab();
 homePage.loadHomePage();
 
 const homeButton = document.querySelector(`#tab-label-0`);
@@ -207,6 +215,7 @@ const contactButton = document.querySelector(`#tab-label-2`);
 homeButton.addEventListener(`click`, function(e)
 {
     menuPage.unloadMenuPage();
+    contactPage.unloadContactPage();
 
     homePage.loadHomePage();
 });
@@ -214,11 +223,15 @@ homeButton.addEventListener(`click`, function(e)
 menuButton.addEventListener(`click`, function(e)
 {
     homePage.unloadHomePage();
+    contactPage.unloadContactPage();
 
     menuPage.loadMenuPage();
 });
 
 contactButton.addEventListener(`click`, function(e)
 {
+    homePage.unloadHomePage();
+    menuPage.unloadMenuPage();
 
-});*/
+    contactPage.loadContactPage();
+});

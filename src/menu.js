@@ -82,7 +82,8 @@ const menuPage = (function()
         const center = document.querySelector(`center`);
 
         const menuBox = document.querySelectorAll(`.menu-box`);
-
+        console.log(menuBox);
+        
         for (let i = 0; i < menuBox.length; i++)
         {
             center.removeChild(menuBox[i]);

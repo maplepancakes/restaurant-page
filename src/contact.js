@@ -21,6 +21,7 @@ const contactPage = (function()
 
         const center = document.querySelector(`center`);
 
+        // Create elements
         const contactBox = document.createElement(`div`);
         const contactImage = document.createElement(`img`);
         const separatorVertical = document.createElement(`div`);
@@ -32,6 +33,7 @@ const contactPage = (function()
             contactDescriptionArray[i] = document.createElement(`label`);
         }
 
+        // Set attributes for created elements
         contactBox.classList.add(`contact-box`);
 
         contactImage.classList.add(`menu-image`);
@@ -51,6 +53,7 @@ const contactPage = (function()
             contactDescriptionArray[i].textContent = contactDescription[i];
         }
 
+        // Append elements for user display
         center.appendChild(contactBox);
         contactBox.appendChild(contactImage);
         contactBox.appendChild(separatorVertical);
@@ -67,6 +70,7 @@ const contactPage = (function()
     {
         const center = document.querySelector(`center`);
         const contactBox = document.querySelector(`.contact-box`);
+        console.log(contactBox);
 
         center.removeChild(contactBox);
     }
