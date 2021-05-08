@@ -11,10 +11,10 @@ const menuPage = (function()
 
         const imageSource = 
         [
-            `/dist/images/ice-gem-biscuit-resized.jpg`,
-            `/dist/images/jelly-resized.jpg`,
-            `/dist/images/oreo-resized.jpg`,
-            `/dist/images/white-rabbit-resized.jpg`
+            `./images/ice-gem-biscuit-resized.jpg`,
+            `./images/jelly-resized.jpg`,
+            `./images/oreo-resized.jpg`,
+            `./images/white-rabbit-resized.jpg`
         ] // Image of menu items
 
         const menuTitle =

@@ -39,7 +39,7 @@ const contactPage = (function()
         contactBox.classList.add(`contact-box`);
 
         contactImage.classList.add(`menu-image`);
-        contactImage.setAttribute(`src`, `/dist/images/aerial-view-painting.resized.jpg`);
+        contactImage.setAttribute(`src`, `./images/aerial-view-painting.resized.jpg`);
 
         separatorVertical.classList.add(`separator-vertical`);
 
