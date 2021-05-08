@@ -1,0 +1,140 @@
+body
+{
+    background-image: url('../images/wallpapersden.com_cloudy-field-paint_3840x2160.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1
+{
+    color: white;
+    font-family: "Yellowtail", Arial;
+    font-size: 100px;
+    text-shadow: 2px 2px 0px black;
+    margin-top: 50px;
+}
+
+#tab-box
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    width: 75vw;
+    height: 50px;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+.tab-selection
+{
+    margin-top: 10px;
+}
+
+.tab-label
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+.tab-label:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.description-box
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 75vw;
+    height: auto;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+.container-header
+{
+    font-family: "Yellowtail", Arial;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.label-description
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.testimonial-name
+{
+    font-family: "Yellowtail", Arial;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.separator
+{
+    height: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 1px solid black;
+}
+
+.menu-box
+{
+    display: grid;
+    grid-template-columns: 380px 1px auto;
+    background-color: white;
+    width: 75vw;
+    height: auto;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+.menu-image
+{
+    margin: 10px 10px 10px 10px;
+    border: 2px solid black;
+}
+
+.separator-vertical
+{
+    margin-top: 10px;
+    border-left: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.menu-description-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-title
+{
+    margin-top: 10px;
+    font-family: "Yellowtail", Arial;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.contact-box
+{
+    display: grid;
+    grid-template-columns: 520px 1px auto;
+    background-color: white;
+    width: 75vw;
+    height: auto;
+    margin-top: 50px;
+    border: 1px solid black;
+}
